@@ -1,0 +1,13 @@
+
+<h1>Contact form (function based view)</h1>
+<form method="post" action="{%url 'functioncontact'%}">
+    {% csrf_token %}
+    {% if name %}
+        <h4>Thank you {{name}} for your email</h4>
+    {% endif %}
+    	<input type="text" name="name" placeholder="name">
+		<input type="email" name="email" placeholder="email">
+		<input type="text" name="subject" placeholder="subject">
+		<input type="text" name="message" placeholder="message">
+    	<input type="submit" value="send">
+</form>
